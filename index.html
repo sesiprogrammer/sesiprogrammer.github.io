@@ -73,11 +73,13 @@
             transition: transform 0.5s ease-in-out; /* Animasi perpindahan */
         }
         .service-item {
-            flex: 1;
+            flex-shrink: 0; /* Mencegah item mengecil */
+            width: 100%; /* Setiap item mengisi penuh container */
             background-color: #fff;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
         }
         .service-item h3 {
             color: #333;
