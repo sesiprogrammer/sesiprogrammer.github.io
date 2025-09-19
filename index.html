@@ -31,6 +31,7 @@
             max-width: 960px;
             margin: 2rem auto;
             padding: 0 2rem;
+            flex-grow: 1; /* Agar container mengisi ruang kosong */
         }
         .hero {
             text-align: center;
@@ -73,6 +74,8 @@
             gap: 2rem;
             text-align: center;
             margin-top: 2rem;
+            /* Pastikan lebar item tidak mengecil di layar kecil */
+            min-width: fit-content;
         }
         .service-item {
             flex: 1;
