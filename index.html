@@ -61,21 +61,16 @@
         .cta-button:hover {
             background-color: #218838;
         }
-        /* CSS untuk Horizontal Scroll */
+        /* CSS untuk Carousel/Slider */
         .services-wrapper {
-            overflow-x: auto; /* Mengaktifkan scroll horizontal */
-            padding-bottom: 1rem; /* Tambahkan ruang di bawah untuk scrollbar */
+            position: relative;
+            max-width: 400px; /* Lebar maksimum slider */
+            margin: 2rem auto;
+            overflow: hidden; /* Sembunyikan item yang tidak aktif */
         }
-        .services {
-            flex-shrink: 0; /* Mencegah item layanan mengecil */
-            width: 300px; /* Atur lebar tetap untuk setiap item */
+        .services-container {
             display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-            text-align: center;
-            margin-top: 2rem;
-            /* Pastikan lebar item tidak mengecil di layar kecil */
-            min-width: fit-content;
+            transition: transform 0.5s ease-in-out; /* Animasi perpindahan */
         }
         .service-item {
             flex: 1;
@@ -88,6 +83,23 @@
             color: #333;
             font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+        /* Tombol Navigasi */
+        .slider-controls {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .slider-button {
+            background-color: #ddd;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .slider-button.active {
+            background-color: #333;
+            color: #fff;
         }
         .footer {
             text-align: center;
@@ -112,7 +124,7 @@
         </section>
 
         <div class="services-wrapper">
-        <section class="services">
+        <div class="services-container">
             <div class="service-item">
                 <h3>Website</h3>
                 <p>Tampilan modern dan responsif untuk semua perangkat.</p>
@@ -122,12 +134,35 @@
                 <p>Pengembangan aplikasi Android kustom untuk kebutuhan bisnis atau pribadi Anda, dengan fitur-fitur terbaik.</p>
             </div>
         </section>
-            </div>
+        </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-button active" onclick="showSlide(0)"></button>
+            <button class="slider-button" onclick="showSlide(1)"></button>
+            <button class="slider-button" onclick="showSlide(2)"></button>
+            <button class="slider-button" onclick="showSlide(3)"></button>
+        </div>
     </main>
 
     <footer class="footer">
         <p>&copy; 2025 Sesi Programmer.</p>
     </footer>
+
+    <script>
+        const container = document.querySelector('.services-container');
+        const buttons = document.querySelectorAll('.slider-button');
+        const items = document.querySelectorAll('.service-item');
+
+        function showSlide(index) {
+            // Hitung pergeseran (transform) untuk menampilkan slide yang sesuai
+            const offset = -index * items[0].offsetWidth;
+            container.style.transform = `translateX(${offset}px)`;
+
+            // Hapus kelas 'active' dari semua tombol dan tambahkan ke tombol yang diklik
+            buttons.forEach(btn => btn.classList.remove('active'));
+            buttons[index].classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
