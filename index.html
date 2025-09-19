@@ -15,6 +15,7 @@
             background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
+            min-height: 100vh; /* Agar body setidaknya setinggi viewport */
         }
         .header {
             background-color: #333;
@@ -59,7 +60,14 @@
         .cta-button:hover {
             background-color: #218838;
         }
+        /* CSS untuk Horizontal Scroll */
+        .services-wrapper {
+            overflow-x: auto; /* Mengaktifkan scroll horizontal */
+            padding-bottom: 1rem; /* Tambahkan ruang di bawah untuk scrollbar */
+        }
         .services {
+            flex-shrink: 0; /* Mencegah item layanan mengecil */
+            width: 300px; /* Atur lebar tetap untuk setiap item */
             display: flex;
             justify-content: space-between;
             gap: 2rem;
@@ -100,6 +108,7 @@
             <a href="https://wa.me/6285136284128" class="cta-button" target="_blank">Hubungi Kami via WhatsApp</a>
         </section>
 
+        <div class="services-wrapper">
         <section class="services">
             <div class="service-item">
                 <h3>Website</h3>
@@ -110,6 +119,7 @@
                 <p>Pengembangan aplikasi Android kustom untuk kebutuhan bisnis atau pribadi Anda, dengan fitur-fitur terbaik.</p>
             </div>
         </section>
+            </div>
     </main>
 
     <footer class="footer">
