@@ -3,166 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Pembuatan Website & Aplikasi Android Murah | Mulai 100 Ribu</title>
-    <meta name="description" content="jasa pembuatan website dan aplikasi Android dengan harga terjangkau. Mulai dari Rp100.000, solusi digital terbaik untuk bisnis Anda. Hubungi kami sekarang!">
-    <meta name="keywords" content="jasa pembuatan website, jasa aplikasi android, website murah, aplikasi android murah">
+    <title>Sesi Programmer - Solusi Pengembangan Digital</title>
     
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh; /* Agar body setidaknya setinggi viewport */
-        }
-        .header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .container {
-            max-width: 960px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-            flex-grow: 1; /* Agar container mengisi ruang kosong */
-        }
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            color: #555;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #28a745;
-            color: #fff;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #218838;
-        }
-        /* CSS untuk Carousel/Slider */
-        .services-wrapper {
-            position: relative;
-            max-width: 400px; /* Lebar maksimum slider */
-            margin: 2rem auto;
-            overflow: hidden; /* Sembunyikan item yang tidak aktif */
-        }
-        .services-container {
-            display: flex;
-            transition: transform 0.5s ease-in-out; /* Animasi perpindahan */
-        }
-        .service-item {
-            flex-shrink: 0; /* Mencegah item mengecil */
-            width: 100%; /* Setiap item mengisi penuh container */
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            box-sizing: border-box; /* Pastikan padding dihitung dalam lebar total */
-        }
-        .service-item h3 {
-            color: #333;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        /* Tombol Navigasi */
-        .slider-controls {
-            text-align: center;
-            margin-top: 1rem;
-        }
-        .slider-button {
-            background-color: #ddd;
-            border: none;
-            padding: 10px;
-            margin: 0 5px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-        .slider-button.active {
-            background-color: #333;
-            color: #fff;
-        }
-        .footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-            margin-top: 2rem;
-        }
-    </style>
+    <meta name="keywords" content="sesi programmer, jasa website, jasa aplikasi android, jasa pembuatan website murah, jasa buat aplikasi android">
+    
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
-        <h1>Jasa Pembuatan Website & Aplikasi Android</h1>
+    <header>
+        <div class="container">
+            <h1>Sesi Programmer</h1>
+            <nav>
+                <ul>
+                    <li><a href="#layanan">Layanan</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <h2>Harga Mulai Rp100.000</h2>
-            <p>Kami menyediakan layanan pembuatan website dan aplikasi Android yang terjangkau untuk bisnis kecil hingga besar.</p>
-            <a href="https://wa.me/6285136284128" class="cta-button" target="_blank">Hubungi Kami via WhatsApp</a>
-        </section>
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2>Mulai Transformasi Digital Anda Hari Ini!</h2>
+            <p>Jasa pembuatan Website dan Aplikasi Android dengan harga mulai Rp 100.000,-.</p>
+        </div>
+    </section>
 
-        <div class="services-wrapper">
-        <div class="services-container">
-            <div class="service-item">
-                <h3>Website</h3>
-                <p>Tampilan responsif untuk semua perangkat.</p>
+    <section id="layanan" class="layanan">
+        <div class="container">
+            <h3>Pilih Layanan Digital yang Anda Butuhkan</h3>
+            <div class="layanan-grid">
+                
+                <a href="https://sesiprogrammer.github.io/jasa-pembuatan-website/" class="layanan-card website-card">
+                    <h4>Jasa Pembuatan Website</h4>
+                    <p>Buat website dengan desain responsif untuk bisnis atau kebutuhan pribadi.</p>
+                    <span class="detail-link">Lihat Detail →</span>
+                </a>
+                
+                <a href="https://sesiprogrammer.github.io/jasa-pembuatan-aplikasi-android/" class="layanan-card android-card">
+                    <h4>Jasa Pembuatan Aplikasi Android</h4>
+                    <p>Kembangkan aplikasi Android Anda. Siap rilis dan digunakan banyak orang.</p>
+                    <span class="detail-link">Lihat Detail →</span>
+                </a>
+                
             </div>
-            <div class="service-item">
-                <h3>Aplikasi Android</h3>
-                <p>Pengembangan aplikasi Android kustom untuk kebutuhan bisnis atau pribadi Anda, dengan fitur-fitur terbaik.</p>
-            </div>
         </div>
+    </section>
+    
+    <section id="kontak" class="kontak">
+        <div class="container">
+            <h3>Punya Pertanyaan? Konsultasi GRATIS!</h3>
+            <a href="https://wa.me/6285136284128" target="_blank" class="whatsapp-button">
+                <span>Hubungi via WhatsApp</span>
+            </a>
         </div>
-        <div class="slider-controls">
-            <button class="slider-button active" onclick="showSlide(0)"></button>
-            <button class="slider-button" onclick="showSlide(1)"></button>
-        </div>
-    </main>
+    </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 Sesi Programmer.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sesi Programmer. Semua Hak Cipta Dilindungi.</p>
+        </div>
     </footer>
-
-    <script>
-        const container = document.querySelector('.services-container');
-        const buttons = document.querySelectorAll('.slider-button');
-        const items = document.querySelectorAll('.service-item');
-
-        function showSlide(index) {
-            // Hitung pergeseran (transform) untuk menampilkan slide yang sesuai
-            const offset = -index * items[0].offsetWidth;
-            container.style.transform = `translateX(${offset}px)`;
-
-            // Hapus kelas 'active' dari semua tombol dan tambahkan ke tombol yang diklik
-            buttons.forEach(btn => btn.classList.remove('active'));
-            buttons[index].classList.add('active');
-        }
-    </script>
 
 </body>
 </html>
