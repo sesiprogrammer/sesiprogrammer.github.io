@@ -19,7 +19,7 @@ body {
     padding: 20px 0;
 }
 
-/* Header & Navigasi - Biru Tua Netral */
+/* Header & Navigasi - Tata Letak Dasar */
 header {
     background-color: #34495e; 
     color: white;
@@ -34,8 +34,6 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Tambahkan padding horizontal agar konten tidak menempel di sisi */
-    padding: 15px 5%; 
 }
 
 header h1 {
@@ -43,12 +41,13 @@ header h1 {
     font-weight: 700;
 }
 
-nav ul {
+/* Navigasi Desktop */
+.navbar nav ul {
     list-style: none;
     display: flex;
 }
 
-nav ul li a {
+.navbar nav ul li a {
     color: white;
     text-decoration: none;
     margin-left: 25px;
@@ -56,45 +55,83 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
+.navbar nav ul li a:hover {
     background-color: #2c3e50; 
     border-radius: 4px;
 }
 
+/* Tombol Menu Toggle (Hamburger) - Tersembunyi di Desktop */
+.menu-toggle {
+    display: none; /* Sembunyikan secara default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1001; /* Pastikan di atas menu */
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 6px 0;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
 /* =================================================== */
-/* ATURAN MOBILE (Diterapkan ketika lebar layar <= 768px) */
+/* ATURAN MOBILE (Menu Tersembunyi + Tombol Terlihat) */
 /* =================================================== */
 @media (max-width: 768px) {
-    header .container {
-        /* Mengubah tata letak menjadi tumpukan vertikal */
+    
+    /* Tampilkan tombol hamburger di mobile */
+    .menu-toggle {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Logo tetap di kiri */
+        justify-content: center;
     }
-
-    nav {
-        /* Menu mengambil lebar penuh */
+    
+    /* Sembunyikan Menu Navigasi secara default di mobile */
+    .navbar {
+        position: absolute;
+        top: 100%; /* Turunkan di bawah header */
+        left: 0;
         width: 100%;
-        margin-top: 10px;
+        height: 0; /* Sembunyikan menu */
+        overflow: hidden;
+        background-color: #34495e;
+        transition: height 0.3s ease-in-out;
     }
 
-    nav ul {
-        /* Menu ditampilkan dalam satu kolom */
+    /* Kelas yang ditambahkan oleh JavaScript saat tombol diklik */
+    .navbar.active {
+        height: auto; /* Tampilkan menu */
+        padding-bottom: 10px;
+    }
+
+    .navbar nav ul {
         flex-direction: column;
-        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
 
-    nav ul li {
-        /* Setiap item menu mengambil lebar penuh */
-        width: 100%;
-        text-align: center; /* Teks menu di tengah */
+    .navbar nav ul li {
+        margin: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    /* Hapus margin kiri agar menu terlihat rapi di tumpukan */
-    nav ul li a {
-        display: block; /* Membuat link mengisi seluruh area LI */
-        margin-left: 0;
-        padding: 10px 0;
+    .navbar nav ul li a {
+        display: block;
+        margin: 0;
+        padding: 12px 0;
+    }
+    
+    /* Ubah ukuran font hero agar tidak terlalu besar di mobile */
+    .hero h2 {
+        font-size: 1.8em;
     }
 
     .layanan-grid {
@@ -102,7 +139,7 @@ nav ul li a:hover {
     }
     
     .layanan-card {
-        max-width: 100%; /* Kartu layanan mengambil lebar penuh di mobile */
+        max-width: 100%;
     }
 }
 /* =================================================== */
@@ -110,7 +147,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    background: linear-gradient(135deg, #3498db, #2980b9); 
     color: white;
     padding: 120px 0;
     text-align: center;
@@ -120,12 +157,6 @@ nav ul li a:hover {
     font-size: 2.8em;
     margin-bottom: 15px;
     font-weight: 700;
-}
-/* Penyesuaian font H2 di Mobile */
-@media (max-width: 768px) {
-    .hero h2 {
-        font-size: 1.8em; 
-    }
 }
 
 .hero p {
@@ -178,10 +209,10 @@ nav ul li a:hover {
 
 /* Warna Aksen untuk Kartu Layanan */
 .website-card h4 {
-    color: #2980b9; /* Biru */
+    color: #2980b9; 
 }
 .android-card h4 {
-    color: #27ae60; /* Hijau */
+    color: #27ae60; 
 }
 
 .detail-link {
