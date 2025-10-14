@@ -70,15 +70,19 @@ header h1 {
     width: 30px;
     height: 30px;
     position: relative;
-    z-index: 1001; /* Pastikan di atas menu */
+    z-index: 1001;
+    /* Tambahkan background agar tombol lebih menonjol */
+    background-color: #f1c40f; /* Kuning Kontras */
+    border-radius: 4px;
+    padding: 4px;
 }
 
 .menu-toggle .bar {
     display: block;
     width: 100%;
     height: 3px;
-    margin: 6px 0;
-    background-color: white;
+    margin: 5px 0;
+    background-color: #34495e; /* Batang berwarna gelap agar kontras dengan latar kuning */
     transition: all 0.3s ease-in-out;
 }
 
@@ -108,7 +112,7 @@ header h1 {
 
     /* Kelas yang ditambahkan oleh JavaScript saat tombol diklik */
     .navbar.active {
-        height: auto; /* Tampilkan menu */
+        height: 100px; /* Nilai height yang cukup untuk menu 2 item */
         padding-bottom: 10px;
     }
 
