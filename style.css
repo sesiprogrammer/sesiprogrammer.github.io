@@ -1,0 +1,178 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.6;
+    background-color: #f4f6f9; /* Latar belakang sangat terang */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header & Navigasi - Biru Tua Netral */
+header {
+    background-color: #34495e; 
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2c3e50; 
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Gradasi Biru */
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Styling untuk .cta-button DIHAPUS karena tombolnya telah dihapus dari HTML */
+
+/* Layanan Section */
+.layanan {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.layanan h3 {
+    font-size: 2em;
+    margin-bottom: 50px;
+    color: #34495e;
+}
+
+.layanan-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.layanan-card {
+    background-color: white;
+    text-align: left;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.layanan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.layanan-card h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Warna Aksen untuk Kartu Layanan */
+.website-card h4 {
+    color: #2980b9; /* Biru */
+}
+.android-card h4 {
+    color: #27ae60; /* Hijau */
+}
+
+.detail-link {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #3498db;
+}
+
+/* Kontak Section */
+.kontak {
+    background-color: #ecf0f1; /* Abu-abu Muda */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.kontak h3 {
+    font-size: 2.5em;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Tombol WhatsApp */
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25d366; /* Hijau WhatsApp */
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    color: #bdc3c7;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
